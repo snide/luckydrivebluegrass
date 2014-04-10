@@ -1,0 +1,74 @@
+{# YOUR HOMEPAGE #}
+
+{# First time seeing extend or blocks? Want to know how it works? Tutorial here: http://www.webhook.com #}
+{% extends "templates/partials/base.html" %}
+
+{% block body_class %}home{% endblock %}
+
+{% set home = get('homepage')%}
+
+{% block content %}
+  <section class="main-image">
+    <img src="{{ home.main_title_image.url }}">
+    <h1>Lucky Drive Bluegrass Trio</h1>
+  </section>
+  <section class="text">
+    <div class="desc">
+      {{ home.band_description|safe }}
+    </div>
+    <div class="player">
+      {# <iframe width="100%" height="240" src="//www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2Fadamkvasnica3%2Fdiggin-for-soul%2F&amp;mini=1&amp;stylecolor=fffd00&amp;embed_type=widget_standard&amp;embed_uuid=4d86bc30-6ed8-4752-8e39-10a4e05e7899&amp;hide_cover=1" frameborder="0"></iframe> #}
+      {{ home.soundcloud_url.html|safe }}
+    </div>
+  </section>
+  <section class="band">
+    <section class="container">
+      {% set band = get('bandmembers')%}
+      <h2>The Band</h2>
+      <ul class="members">
+        {% for member in band %}
+        <li>
+          <div class="img"><img src="{{ member.image.url }}"></div>
+          <div class="member">
+            <h5>{{ member.name }}</h5>
+            <p>
+              {{ member.bio }}
+            </p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </section>
+  <section class="text">
+    <section class="container">
+      <a name="booking"></a>
+      <h2>Schedule</h2>
+
+      {{ home.booking_info|safe }}
+
+      {% set gigs = get('gigs')%}
+
+      <table class="wy-table wy-table-bordered-rows full-width lucky-table">
+        <tbody>
+          {% for gig in gigs|sort('gig_time') %}
+            {% set rel = getItem(gig.venue) %}
+            <tr>
+              <td>{{ gig.gig_time|date('D M d, Y.') }}</td>
+              <td><a href="{{ rel.website }}">{{ gig.name }}</a></td>
+              <td>{% if price %}{{ gig.price }}{% else %}Free{% endif %}</td>
+              <td>
+                <a href="https://www.google.com/maps/place/{{ rel.street1 }} {{ rel.address.city }} {{ rel.address.state }}">{{ rel.address.street1 }} {{ rel.address.city }}, {{ rel.address.state }}</a>.
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <hr/>
+
+      <p class="fb">Visit us on <a href="https://www.facebook.com/{{ getSetting('siteFacebook') }}" class="fa fa-facebook"> Facebook</a></p>
+    </section>
+  </section>
+{% endblock %}
+
