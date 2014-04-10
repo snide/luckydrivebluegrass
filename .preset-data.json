@@ -1,0 +1,333 @@
+{
+  "bandmembers": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "hidden": false,
+        "label": "Image",
+        "locked": false,
+        "name": "image",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "textarea",
+        "help": "Keep it short!",
+        "hidden": false,
+        "label": "Bio",
+        "locked": false,
+        "name": "bio",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      }
+    ],
+    "name": "Band Members",
+    "oneOff": false
+  },
+  "gigs": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "help": "Gig name. Usually it's just the place you're playing, but could be \"Anniversary Show at Wherever\".",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "placeholder": "",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "number",
+        "help": "Leave blank if free.",
+        "hidden": false,
+        "label": "Price",
+        "locked": false,
+        "name": "price",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": false,
+        "label": "Gig time",
+        "locked": false,
+        "name": "gig_time",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "help": "If it's a new venue, please add it to the Venue list on the left, then come back here.",
+        "hidden": false,
+        "label": "Venue",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "venues",
+          "isSingle": true
+        },
+        "name": "venue",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "name": "Gigs",
+    "oneOff": false
+  },
+  "homepage": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "help": "Short paragraph about the band.",
+        "hidden": false,
+        "label": "Band description",
+        "locked": false,
+        "meta": {
+          "image": false,
+          "link": false,
+          "quote": false,
+          "table": false,
+          "video": false
+        },
+        "name": "band_description",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "embedly",
+        "help": "Paste the URL to your soundcloud playlist",
+        "hidden": false,
+        "label": "Soundcloud URL",
+        "locked": false,
+        "name": "soundcloud_url",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "image",
+        "help": "This is the image at the top of the page.",
+        "hidden": false,
+        "label": "Main title image",
+        "locked": false,
+        "name": "main_title_image",
+        "placeholder": "",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "help": "The booking info at the bottom of the page above gigs.",
+        "hidden": false,
+        "label": "Booking info",
+        "locked": false,
+        "meta": {
+          "image": false,
+          "link": true,
+          "quote": false,
+          "table": false,
+          "video": false
+        },
+        "name": "booking_info",
+        "required": true,
+        "showInCms": false
+      }
+    ],
+    "name": "homepage",
+    "oneOff": true
+  },
+  "venues": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "address",
+        "hidden": false,
+        "label": "Address",
+        "locked": false,
+        "name": "address",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "url",
+        "hidden": false,
+        "label": "Website",
+        "locked": false,
+        "name": "website",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      }
+    ],
+    "name": "Venues",
+    "oneOff": false
+  }
+}
