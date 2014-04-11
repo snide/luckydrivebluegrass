@@ -3379,14 +3379,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 .text .player {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-right: 0;
-}
-.text .player:last-child {
-  margin-right: 0;
+  float: right;
+  margin: 0 0 24px 24px;
 }
 .text .desc {
   display: block;
@@ -3430,7 +3424,7 @@ h2 {
   color: #2980b9 !important;
 }
 
-.wy-table.lucky-table td {
+.wy-table.lucky-table td, .wy-table.lucky-table th {
   font-size: 100%;
   line-height: 1.5;
   border-color: #d9d1bf;
@@ -3443,6 +3437,11 @@ h2 {
   }
 }
 @media screen and (max-width: 480px) {
+  .text .player {
+    margin: 0;
+    width: 100%;
+  }
+
   .main-image h1 {
     font-size: 30px;
   }
