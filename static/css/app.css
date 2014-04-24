@@ -3439,6 +3439,7 @@ h2 {
 @media screen and (max-width: 480px) {
   .text .player {
     margin: 0;
+    margin-bottom: 24px;
     width: 100%;
   }
 

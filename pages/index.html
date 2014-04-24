@@ -37,9 +37,14 @@
           <tr>
             <td>{{ gig.gig_time|date('D M d, Y.') }}</td>
             <td><a href="{{ rel.website }}">{{ gig.name }}</a></td>
-            <td>{{ gig.price }}</td>
             <td>
-              <a href="https://www.google.com/maps/place/{{ rel.street1 }} {{ rel.address.city }} {{ rel.address.state }}">{{ rel.address.street1 }} {{ rel.address.city }}, {{ rel.address.state }}</a>.
+              {{ gig.price }}
+              {% if gig.buy_tickets_url %}
+                (<a href="{{ gig.buy_tickets_url }}">buy tickets</a>)
+              {% endif %}
+            </td>
+            <td>
+              <a href="https://www.google.com/maps/place/{{ rel.address.street1 }} {{ rel.address.city }} {{ rel.address.state }}">{{ rel.address.street1 }} {{ rel.address.city }}, {{ rel.address.state }}</a>.
             </td>
           </tr>
         {% endfor %}
